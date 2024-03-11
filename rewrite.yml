@@ -1,0 +1,8 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: orcun.CommonStaticAnalysis
+displayName: Common static analysis issues
+description: Resolve common static analysis issues discovered through 3rd party tools.
+recipeList:
+  - org.openrewrite.staticanalysis.UseDiamondOperator
+  
