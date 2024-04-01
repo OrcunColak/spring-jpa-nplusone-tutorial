@@ -13,10 +13,10 @@ import java.util.Optional;
 
 @SpringBootTest
 @Slf4j
-class AuthorRepositoryTest {
+class AuthorRepository3Test {
 
     @Autowired
-    private AuthorRepository repository;
+    private AuthorRepository3 repository;
 
     @Test
     @Transactional
@@ -34,7 +34,7 @@ class AuthorRepositoryTest {
     @Test
     @Transactional
     void findByIdWithBooks() {
-        Optional<Author> optional = repository.findByIdWithBooks(1L);
+        Optional<Author> optional = repository.findById(1L);
         optional.ifPresentOrElse(author -> {
                     for (Book book : author.getBooks()) {
                         log.info("Book title : {}", book.getTitle());
